@@ -21,6 +21,7 @@ function App() {
   const [isSidebar, setIsSidebar] = useState(true);
 
   return (
+   <HashRouter>
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -45,6 +46,7 @@ function App() {
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
+  </HashRouter>
   );
 }
 
