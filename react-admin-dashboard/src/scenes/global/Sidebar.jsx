@@ -21,16 +21,18 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <MenuItem
+   <MenuItem
       active={selected === title}
       style={{
         color: colors.grey[100],
       }}
       onClick={() => setSelected(title)}
       icon={icon}
+      /* 1. Use the 'component' prop to link the Router */
+      component={<Link to={to} />} 
     >
       <Typography>{title}</Typography>
-      <Link to={to} />
+      {/* 2. REMOVE the <Link to={to} /> from here */}
     </MenuItem>
   );
 };
