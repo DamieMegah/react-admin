@@ -35,3 +35,26 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@media screen and (max-width: 580px) {
+  body {
+    margin: 0;
+  }
+
+  body > * {
+    display: none;
+  }
+
+  body::before {
+    content: "Device size not supported. Please use a larger device.";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+}
+
